@@ -176,7 +176,8 @@ for epoch in range(args.epochs):
             if isinstance(rest[0][0], str):
                         image_filename = rest[0][0]
             else:
-                        image_filename = '%s.png' % str(batch_idx + 1).zfill(3)
+                        # image_filename = '%s.png' % str(batch_idx + 1).zfill(3)
+                        image_filename = '%s.jpg' % str(batch_idx + 1).zfill(3)
 
             X_batch = Variable(X_batch.to(device='cuda'))
             y_batch = Variable(y_batch.to(device='cuda'))
